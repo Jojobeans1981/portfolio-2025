@@ -1,32 +1,84 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Github, Linkedin, Code2, ExternalLink, TestTube2, Library, Briefcase, Mail, MapPin, Download, Play } from 'lucide-react';
+import React, { useState, ReactElement } from 'react';
+import { Github, Linkedin, Code2, LucideIcon, ExternalLink, Briefcase, Mail, MapPin, Download, Play } from 'lucide-react';
+import Image from 'next/image';
+
+interface Project {
+  title: string;
+  description: string;
+  videoUrl: string;
+  videoType: 'loom' | 'mp4';
+  github?: string;
+  live?: string;
+  tech: string[];
+}
+
+interface QuickLink {
+  icon: LucideIcon;
+  label: string;
+  href: string;
+  bg: string;
+}
+
+interface ExperienceSection {
+  title: string;
+  items: string[];
+}
 
 const Portfolio = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
-  const [playingVideo, setPlayingVideo] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Python Space Invaders Clone",
-      description: "My version of the classic space invaders game built with Pygame",
+      description: "A modernized clone of the classic Space Invaders arcade game built with Python and Pygame. Features include dynamic enemy movement, score tracking, and sound effects.",
       videoUrl: "https://www.loom.com/share/44f7d38e4a554d2685f543b2af4a09db",
       videoType: "loom",
-      tech: ["Python", "Pygame"]
+      github: "https://github.com/jlpanetta1681/space-invaders",
+      tech: ["Python", "Pygame", "OOP", "Game Development"]
     },
     {
-      title: "EchoBot Interface",
-      description: "Modern chat interface with comprehensive testing",
-      videoUrl: "https://example.com/echobot-demo.mp4",
+      title: "Polyspot Translator",
+      description: "A language translation application that seamlessly translates text between multiple languages. Built with React and leveraging modern translation APIs.",
+      videoUrl: "https://example.com/polyspot-demo.mp4",
       videoType: "mp4",
-      github: "https://github.com/jlpanetta1681/echobot",
-      live: "https://echobot.demo.com",
-      tech: ["React", "TypeScript", "RTL", "Tailwind"]
+      github: "https://github.com/jlpanetta1681/polyspot",
+      live: "https://polyspot-translator.vercel.app",
+      tech: ["React", "TypeScript", "Translation API", "Tailwind CSS"]
     }
   ];
 
-  const handleVideoClick = (index) => {
+  const quickLinks: QuickLink[] = [
+    { icon: Github, label: "GitHub", href: "https://github.com/jlpanetta1681", bg: "from-gray-700 to-gray-800" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/jlpanetta1681", bg: "from-blue-700 to-blue-800" },
+    { icon: Download, label: "Resume", href: "/resume.pdf", bg: "from-purple-700 to-purple-800" },
+    { icon: Mail, label: "Contact", href: "mailto:jlpanetta1681@gmail.com", bg: "from-green-700 to-green-800" }
+  ];
+
+  const experienceSections: ExperienceSection[] = [
+    {
+      title: "Testing & QA",
+      items: [
+        "90% test coverage achievement",
+        "Jest and Cypress expertise",
+        "React Testing Library mastery",
+        "CI/CD integration"
+      ]
+    },
+    {
+      title: "Development",
+      items: [
+        "React & TypeScript",
+        "T3 Stack proficiency",
+        "State management expertise",
+        "Performance optimization"
+      ]
+    }
+  ];
+
+  const handleVideoClick = (index: number): void => {
     if (playingVideo === index) {
       setPlayingVideo(null);
     } else {
@@ -34,7 +86,7 @@ const Portfolio = () => {
     }
   };
 
-  const renderVideoPreview = (project, index) => {
+  const renderVideoPreview = (project: Project, index: number): ReactElement => {
     if (playingVideo === index) {
       if (project.videoType === "loom") {
         return (
@@ -61,11 +113,14 @@ const Portfolio = () => {
 
     return (
       <>
-        <img
-          src="/api/placeholder/640/360"
-          alt={project.title}
-          className="w-full h-full object-cover"
-        />
+         <Image
+            src="/api/placeholder/640/360"
+            alt={project.title}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+            priority={index === 0} // Prioritize loading the first image
+          />
         <div 
           className={`absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center cursor-pointer transition-opacity duration-300 ${hoveredCard === index ? 'opacity-100' : 'opacity-0'}`}
           onClick={() => handleVideoClick(index)}
@@ -104,12 +159,7 @@ const Portfolio = () => {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-              {[
-                { icon: Github, label: "GitHub", href: "https://github.com/jlpanetta1681", bg: "from-gray-700 to-gray-800" },
-                { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/jlpanetta1681", bg: "from-blue-700 to-blue-800" },
-                { icon: Download, label: "Resume", href: "/resume.pdf", bg: "from-purple-700 to-purple-800" },
-                { icon: Mail, label: "Contact", href: "mailto:jlpanetta1681@gmail.com", bg: "from-green-700 to-green-800" }
-              ].map((link, index) => (
+              {quickLinks.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
@@ -177,26 +227,7 @@ const Portfolio = () => {
               </h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {[
-                  {
-                    title: "Testing & QA",
-                    items: [
-                      "90% test coverage achievement",
-                      "Jest and Cypress expertise",
-                      "React Testing Library mastery",
-                      "CI/CD integration"
-                    ]
-                  },
-                  {
-                    title: "Development",
-                    items: [
-                      "React & TypeScript",
-                      "T3 Stack proficiency",
-                      "State management expertise",
-                      "Performance optimization"
-                    ]
-                  }
-                ].map((section, index) => (
+                {experienceSections.map((section, index) => (
                   <div key={index} className="bg-gray-800 rounded-lg p-6 transform transition-all duration-300 hover:scale-105 hover:bg-gray-750">
                     <h4 className="text-xl font-bold mb-4 text-blue-400">{section.title}</h4>
                     <ul className="space-y-3">
