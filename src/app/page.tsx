@@ -76,8 +76,7 @@ const Portfolio = () => {
         "Performance optimization"
       ]
     }
-  ];git 
-
+  ];
   const handleVideoClick = (index: number): void => {
     if (playingVideo === index) {
       setPlayingVideo(null);
