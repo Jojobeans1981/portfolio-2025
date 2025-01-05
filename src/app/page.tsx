@@ -12,6 +12,7 @@ interface Project {
   github?: string;
   live?: string;
   tech: string[];
+  thumbnail?: string;
 }
 
 interface QuickLink {
@@ -37,7 +38,8 @@ const Portfolio = () => {
       videoUrl: "https://www.loom.com/share/44f7d38e4a554d2685f543b2af4a09db",
       videoType: "loom",
       github: "https://github.com/jlpanetta1681/space-invaders",
-      tech: ["Python", "Pygame", "OOP", "Game Development"]
+      tech: ["Python", "Pygame", "OOP", "Game Development"],
+      thumbnail: "/public/space-cover.jpg"
     },
     {
       title: "Polyspot Translator",
