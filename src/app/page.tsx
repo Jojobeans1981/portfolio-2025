@@ -116,7 +116,6 @@ const Portfolio = () => {
       <>
          <Image
            src={project.thumbnail || "/default-thumbnail.png"}
-
             alt={project.title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
