@@ -115,7 +115,7 @@ const Portfolio = () => {
     return (
       <>
          <Image
-           src={project.thumbnail || "/public/space-cover.jpg"}
+           src={"/public/space-cover.jpg"}
             alt={project.title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
