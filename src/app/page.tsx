@@ -116,7 +116,7 @@ const Portfolio = () => {
     return (
       <>
          <Image
-           src={"polyspot-logo/jpg"}
+           src={"polyspot-logo.jpg"}
             alt={project.title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
