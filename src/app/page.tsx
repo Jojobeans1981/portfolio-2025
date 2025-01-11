@@ -39,7 +39,7 @@ const Portfolio = () => {
       videoType: "loom",
       github: "https://github.com/jlpanetta1681/space-invaders",
       tech: ["Python", "Pygame", "OOP", "Game Development"],
-      thumbnail: "/public/space-cover.jpg"
+      thumbnail: "/space-cover.jpg"
     },
     {
       title: "Polyspot Translator",
