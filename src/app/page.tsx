@@ -12,7 +12,7 @@ interface Project {
   github?: string;
   live?: string;
   tech: string[];
-  thumbnail?: string;
+  thumbnail: string;
 }
 
 interface QuickLink {
@@ -48,7 +48,8 @@ const Portfolio = () => {
       videoType: "mp4",
       github: "https://github.com/jlpanetta1681/polyspot",
       live: "https://polyspot-translator.vercel.app",
-      tech: ["React", "TypeScript", "Translation API", "Tailwind CSS"]
+      tech: ["React", "TypeScript", "Translation API", "Tailwind CSS"],
+      thumbnail: "/polyspot-cover.jpg"
     }
   ];
 
@@ -115,7 +116,7 @@ const Portfolio = () => {
     return (
       <>
          <Image
-           src={"/public/space-cover.jpg"}
+           src={"/space-cover.jpg"}
             alt={project.title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
