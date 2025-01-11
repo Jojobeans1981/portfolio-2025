@@ -49,7 +49,7 @@ const Portfolio = () => {
       github: "https://github.com/jlpanetta1681/polyspot",
       live: "https://polyspot-translator.vercel.app",
       tech: ["React", "TypeScript", "Translation API", "Tailwind CSS"],
-      thumbnail: "/polyspot-cover.jpg"
+      thumbnail: "/polyspot-logo.jpg"
     }
   ];
 
