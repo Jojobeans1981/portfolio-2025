@@ -55,7 +55,7 @@ const Portfolio = () => {
   const quickLinks: QuickLink[] = [
     { icon: Github, label: "GitHub", href: "https://github.com/jlpanetta1681", bg: "from-gray-700 to-gray-800" },
     { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/jlpanetta1681", bg: "from-blue-700 to-blue-800" },
-    { icon: Download, label: "Resume", href: "/resume.pdf", bg: "from-purple-700 to-purple-800" },
+    { icon: Download, label: "Resume", href: "public\LinkedInRres.pdf", bg: "from-purple-700 to-purple-800" },
     { icon: Mail, label: "Contact", href: "mailto:jlpanetta1681@gmail.com", bg: "from-green-700 to-green-800" }
   ];
 
@@ -115,7 +115,7 @@ const Portfolio = () => {
     return (
       <>
          <Image
-           src={project.thumbnail || "/default-thumbnail.png"}
+           src={project.thumbnail || "/public/space-cover.jpg"}
             alt={project.title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
