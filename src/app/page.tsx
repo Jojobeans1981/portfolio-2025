@@ -46,8 +46,8 @@ const Portfolio = () => {
       description: "A language translation application that seamlessly translates text between multiple languages. Built with React and leveraging modern translation APIs.",
       videoUrl: "https://example.com/polyspot-demo.mp4",
       videoType: "mp4",
-      github: "https://github.com/jlpanetta1681/polyspot",
-      live: "https://polyspot-translator.vercel.app",
+      github: "https://https://github.com/jlpanetta1681/Translator",
+      // live: "https://polyspot-translator.vercel.app",
       tech: ["React", "TypeScript", "Translation API", "Tailwind CSS"],
       thumbnail: "/polyspot-logo.jpg"
     }
