@@ -34,28 +34,24 @@ const Portfolio = () => {
  const projects = [
   {
     title: "Prometheus Talent Engine",
-    description: "AI-powered talent retention platform that uses predictive analytics to identify at-risk employees and provide actionable retention recommendations.",
-    videoUrl: "/prometheus-demo.mp4",
+    description: "AI-powered talent retention platform that uses predictive analytics to identify at-risk employees and provide actionable retention recommendations. Built to demonstrate ethical AI that enhances human employment.",
+    videoUrl: "", // Empty for now - remove video functionality temporarily
     videoType: "mp4", 
     github: "https://github.com/jlpanetta1681/prometheus",
-    live: "https://prometheus-demo.vercel.app",
-    tech: ["React", "TypeScript", "Node.js", "MongoDB", "AI/ML", "Data Analytics"],
-    thumbnail: "/prometheus-dashboard.jpg"
+    live: "https://prometheus-demo.vercel.app", // Will update when deployed
+    tech: ["React", "TypeScript", "Node.js", "MongoDB", "AI/ML", "Data Analytics", "HR Tech"],
+    thumbnail: "/project-placeholder.jpg" // Use a simple placeholder
   },
   {
     title: "Polyspot Translator",
     description: "A language translation application that seamlessly translates text between multiple languages. Built with React and leveraging modern translation APIs.",
-    videoUrl: "https://example.com/polyspot-demo.mp4",
+    videoUrl: "",
     videoType: "mp4",
     github: "https://github.com/jlpanetta1681/Translator",
-    // live: "https://polyspot-translator.vercel.app",
     tech: ["React", "TypeScript", "Translation API", "Tailwind CSS"],
-    thumbnail: "/polyspot-logo.jpg"
+    thumbnail: "/project-placeholder.jpg"
   }
-
-];
-
-  const quickLinks: QuickLink[] = [
+];  const quickLinks: QuickLink[] = [
     { icon: Github, label: "GitHub", href: "https://github.com/jlpanetta1681", bg: "from-gray-700 to-gray-800" },
     { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/jlpanetta1681", bg: "from-blue-700 to-blue-800" },
     { icon: Download, label: "Resume", href: "https://docs.google.com/document/d/1VwKwovbbT0cIwuwp_WgZ8TAn56-N-Khy2KkWNK90Zfo/edit?tab=t.0", bg: "from-purple-700 to-purple-800" },
