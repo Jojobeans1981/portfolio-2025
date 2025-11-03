@@ -31,27 +31,29 @@ const Portfolio = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
 
-  const projects: Project[] = [
-    {
-      title: "Python Space Invaders Clone",
-      description: "A modernized clone of the classic Space Invaders arcade game built with Python and Pygame. Features include dynamic enemy movement, score tracking, and sound effects.",
-      videoUrl: "https://www.loom.com/share/44f7d38e4a554d2685f543b2af4a09db",
-      videoType: "loom",
-      github: "https://github.com/jlpanetta1681/space-invaders",
-      tech: ["Python", "Pygame", "OOP", "Game Development"],
-      thumbnail: "/space-cover.jpg"
-    },
-    {
-      title: "Polyspot Translator",
-      description: "A language translation application that seamlessly translates text between multiple languages. Built with React and leveraging modern translation APIs.",
-      videoUrl: "https://example.com/polyspot-demo.mp4",
-      videoType: "mp4",
-      github: "https://https://github.com/jlpanetta1681/Translator",
-      // live: "https://polyspot-translator.vercel.app",
-      tech: ["React", "TypeScript", "Translation API", "Tailwind CSS"],
-      thumbnail: "/polyspot-logo.jpg"
-    }
-  ];
+ const projects = [
+  {
+    title: "Prometheus Talent Engine",
+    description: "AI-powered talent retention platform that uses predictive analytics to identify at-risk employees and provide actionable retention recommendations.",
+    videoUrl: "/prometheus-demo.mp4",
+    videoType: "mp4", 
+    github: "https://github.com/jlpanetta1681/prometheus",
+    live: "https://prometheus-demo.vercel.app",
+    tech: ["React", "TypeScript", "Node.js", "MongoDB", "AI/ML", "Data Analytics"],
+    thumbnail: "/prometheus-dashboard.jpg"
+  },
+  {
+    title: "Polyspot Translator",
+    description: "A language translation application that seamlessly translates text between multiple languages. Built with React and leveraging modern translation APIs.",
+    videoUrl: "https://example.com/polyspot-demo.mp4",
+    videoType: "mp4",
+    github: "https://github.com/jlpanetta1681/Translator",
+    // live: "https://polyspot-translator.vercel.app",
+    tech: ["React", "TypeScript", "Translation API", "Tailwind CSS"],
+    thumbnail: "/polyspot-logo.jpg"
+  }
+
+];
 
   const quickLinks: QuickLink[] = [
     { icon: Github, label: "GitHub", href: "https://github.com/jlpanetta1681", bg: "from-gray-700 to-gray-800" },
