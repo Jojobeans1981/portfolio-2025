@@ -46,10 +46,10 @@ const Portfolio = () => {
       description: "AI-powered talent retention platform that uses predictive analytics to identify at-risk employees and provide actionable retention recommendations. Built to demonstrate ethical AI that enhances human employment rather than replacing it.",
       videoUrl: "/prometheus-demo.mp4",
       videoType: "mp4",
-      github: "https://github.com/jlpanetta1681/prometheus",
-      live: "https://prometheus-demo.vercel.app",
+      github: "https://github.com/Jojobeans1981/hr-Analytics-Engine",
+      live: "https://dashboard-new-eta-blond.vercel.app/",
       tech: ["React", "TypeScript", "Node.js", "MongoDB", "AI/ML", "Data Analytics", "HR Tech"],
-      thumbnail: "/prometheus-dashboard.jpg"
+      thumbnail: "/prometheus-Dash.png"
     }
   ];
 
