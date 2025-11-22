@@ -44,8 +44,8 @@ const Portfolio = () => {
     {
       title: "Prometheus Talent Engine",
       description: "AI-powered talent retention platform that uses predictive analytics to identify at-risk employees and provide actionable retention recommendations. Built to demonstrate ethical AI that enhances human employment rather than replacing it.",
-      videoUrl: "/prometheus-demo.mp4",
-      videoType: "mp4",
+      videoUrl: "https://www.loom.com/share/df0bd8160143478abba219b5d04b2d23",
+      videoType: "loom",
       github: "https://github.com/Jojobeans1981/hr-Analytics-Engine",
       live: "https://dashboard-new-eta-blond.vercel.app/",
       tech: ["React", "TypeScript", "Node.js", "MongoDB", "AI/ML", "Data Analytics", "HR Tech"],
