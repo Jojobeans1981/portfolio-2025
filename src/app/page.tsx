@@ -12,7 +12,7 @@ interface Project {
   github?: string;
   live?: string;
   tech: string[];
-  thumbnail?: string;
+  thumbnail: string;
 }
 
 interface QuickLink {
@@ -39,23 +39,24 @@ const Portfolio = () => {
       videoType: "loom",
       github: "https://github.com/jlpanetta1681/space-invaders",
       tech: ["Python", "Pygame", "OOP", "Game Development"],
-      thumbnail: "/public/space-cover.jpg"
+      thumbnail: "/space-cover.jpg"
     },
     {
-      title: "Polyspot Translator",
-      description: "A language translation application that seamlessly translates text between multiple languages. Built with React and leveraging modern translation APIs.",
-      videoUrl: "https://example.com/polyspot-demo.mp4",
+      title: "Prometheus Talent Engine",
+      description: "AI-powered talent retention platform that uses predictive analytics to identify at-risk employees and provide actionable retention recommendations. Built to demonstrate ethical AI that enhances human employment rather than replacing it.",
+      videoUrl: "/prometheus-demo.mp4",
       videoType: "mp4",
-      github: "https://github.com/jlpanetta1681/polyspot",
-      live: "https://polyspot-translator.vercel.app",
-      tech: ["React", "TypeScript", "Translation API", "Tailwind CSS"]
+      github: "https://github.com/Jojobeans1981/hr-Analytics-Engine",
+      live: "https://dashboard-new-eta-blond.vercel.app/",
+      tech: ["React", "TypeScript", "Node.js", "MongoDB", "AI/ML", "Data Analytics", "HR Tech"],
+      thumbnail: "/prometheus-Dash.png"
     }
   ];
 
   const quickLinks: QuickLink[] = [
     { icon: Github, label: "GitHub", href: "https://github.com/jlpanetta1681", bg: "from-gray-700 to-gray-800" },
     { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/jlpanetta1681", bg: "from-blue-700 to-blue-800" },
-    { icon: Download, label: "Resume", href: "/resume.pdf", bg: "from-purple-700 to-purple-800" },
+    { icon: Download, label: "Resume", href: "https://docs.google.com/document/d/1VwKwovbbT0cIwuwp_WgZ8TAn56-N-Khy2KkWNK90Zfo/edit?tab=t.0", bg: "from-purple-700 to-purple-800" },
     { icon: Mail, label: "Contact", href: "mailto:jlpanetta1681@gmail.com", bg: "from-green-700 to-green-800" }
   ];
 
@@ -115,7 +116,7 @@ const Portfolio = () => {
     return (
       <>
          <Image
-           src={project.thumbnail || "/default-thumbnail.png"}
+           src={project.thumbnail}
             alt={project.title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
