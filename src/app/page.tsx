@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState, ReactElement } from 'react';
-import { Github, Linkedin, Code2, LucideIcon, ExternalLink, Briefcase, Mail, MapPin, Download, Play } from 'lucide-react';
+import { Github, Linkedin, Code2, LucideIcon, ExternalLink, Briefcase, Mail, MapPin, Download, Play, Info } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Project {
   title: string;
@@ -157,6 +158,13 @@ const Portfolio = () => {
                 <h2 className="text-3xl font-semibold mb-8 text-blue-400">
                   Frontend Developer → QA Automation Engineer
                 </h2>
+                <Link 
+                  href="/about" 
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20"
+                >
+                  <Info size={20} />
+                  My Mission & About
+                </Link>
               </div>
             </div>
 
